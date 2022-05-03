@@ -1,5 +1,5 @@
 //
-//  ContentView+Observed.swift
+//  CycleView+Observed.swift
 //  CircularPath
 //
 //  Created by Christopher Alford on 3/5/22.
@@ -8,7 +8,7 @@
 import Combine
 import SwiftUI
 
-extension ContentView {
+extension CycleView {
     class Observed: ObservableObject {
         
         struct RoundView: Identifiable {
