@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/christopheralford/Developer/CircularPath/CycleTracker.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
