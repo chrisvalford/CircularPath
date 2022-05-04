@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */; };
 		2F64271B2822846200E42784 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64271A2822846200E42784 /* ProgressBarView.swift */; };
+		2F6CEDA928228E600037523A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDA828228E600037523A /* UserModel.swift */; };
+		2F6CEDAB28228E700037523A /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDAA28228E700037523A /* CycleModel.swift */; };
+		2F6CEDAE28228E960037523A /* CycleTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDAC28228E960037523A /* CycleTracker.xcdatamodeld */; };
+		2F6CEDB028228F770037523A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDAF28228F770037523A /* Persistence.swift */; };
 		2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089A2732EC62008F8250 /* CircularPathApp.swift */; };
 		2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089C2732EC62008F8250 /* CycleView.swift */; };
 		2FDB089F2732EC64008F8250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDB089E2732EC64008F8250 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleView+Observed.swift"; sourceTree = "<group>"; };
 		2F64271A2822846200E42784 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		2F6CEDA828228E600037523A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2F6CEDAA28228E700037523A /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
+		2F6CEDAD28228E960037523A /* CycleTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CycleTracker.xcdatamodel; sourceTree = "<group>"; };
+		2F6CEDAF28228F770037523A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2FDB08972732EC62008F8250 /* CycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDB089A2732EC62008F8250 /* CircularPathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularPathApp.swift; sourceTree = "<group>"; };
 		2FDB089C2732EC62008F8250 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
@@ -38,6 +46,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F6CEDA728228E4E0037523A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CEDA828228E600037523A /* UserModel.swift */,
+				2F6CEDAA28228E700037523A /* CycleModel.swift */,
+				2F6CEDAC28228E960037523A /* CycleTracker.xcdatamodeld */,
+				2F6CEDAF28228F770037523A /* Persistence.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2FDB088E2732EC62008F8250 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +76,7 @@
 		2FDB08992732EC62008F8250 /* CircularPath */ = {
 			isa = PBXGroup;
 			children = (
+				2F6CEDA728228E4E0037523A /* Models */,
 				2FDB08AC2732F09C008F8250 /* Scenes */,
 				2FDB089A2732EC62008F8250 /* CircularPathApp.swift */,
 				2FDB089E2732EC64008F8250 /* Assets.xcassets */,
@@ -155,11 +175,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6CEDB028228F770037523A /* Persistence.swift in Sources */,
 				2F64271B2822846200E42784 /* ProgressBarView.swift in Sources */,
 				2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */,
 				2FDB08AF2732F0D1008F8250 /* RoundButton.swift in Sources */,
 				2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */,
+				2F6CEDA928228E600037523A /* UserModel.swift in Sources */,
+				2F6CEDAE28228E960037523A /* CycleTracker.xcdatamodeld in Sources */,
 				2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */,
+				2F6CEDAB28228E700037523A /* CycleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F6CEDAC28228E960037523A /* CycleTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F6CEDAD28228E960037523A /* CycleTracker.xcdatamodel */,
+			);
+			currentVersion = 2F6CEDAD28228E960037523A /* CycleTracker.xcdatamodel */;
+			path = CycleTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2FDB088F2732EC62008F8250 /* Project object */;
 }
