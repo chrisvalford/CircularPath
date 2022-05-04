@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */; };
-		2F3D676A2821AA2500DFD9A1 /* CycleStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D67692821AA2500DFD9A1 /* CycleStartView.swift */; };
+		2F7EA44C282282FD008BD445 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7EA44B282282FD008BD445 /* ProgressBarView.swift */; };
 		2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089A2732EC62008F8250 /* CircularPathApp.swift */; };
 		2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089C2732EC62008F8250 /* CycleView.swift */; };
 		2FDB089F2732EC64008F8250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDB089E2732EC64008F8250 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleView+Observed.swift"; sourceTree = "<group>"; };
-		2F3D67692821AA2500DFD9A1 /* CycleStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleStartView.swift; sourceTree = "<group>"; };
+		2F7EA44B282282FD008BD445 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		2FDB08972732EC62008F8250 /* CycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDB089A2732EC62008F8250 /* CircularPathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularPathApp.swift; sourceTree = "<group>"; };
 		2FDB089C2732EC62008F8250 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
@@ -50,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				2FDB08972732EC62008F8250 /* CycleTracker.app */,
-
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,7 +79,7 @@
 				2FDB089C2732EC62008F8250 /* CycleView.swift */,
 				2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */,
 				2FDB08AE2732F0D1008F8250 /* RoundButton.swift */,
-				2F3D67692821AA2500DFD9A1 /* CycleStartView.swift */,
+				2F7EA44B282282FD008BD445 /* ProgressBarView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -120,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CycleTracker" */;
+			buildConfigurationList = 2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CircularPath" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -156,7 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F3D676A2821AA2500DFD9A1 /* CycleStartView.swift in Sources */,
+				2F7EA44C282282FD008BD445 /* ProgressBarView.swift in Sources */,
 				2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */,
 				2FDB08AF2732F0D1008F8250 /* RoundButton.swift in Sources */,
 				2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */,
@@ -344,7 +343,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CycleTracker" */ = {
+		2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CircularPath" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FDB08A32732EC64008F8250 /* Debug */,
