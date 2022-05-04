@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F7AD67F2821DCF900AA2048 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AD67B2821DCEB00AA2048 /* RoundButton.swift */; };
-		2F7AD6802821DCF900AA2048 /* CycleView+Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AD67C2821DCEB00AA2048 /* CycleView+Observed.swift */; };
-		2F7AD6812821DCF900AA2048 /* CycleStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AD67D2821DCEB00AA2048 /* CycleStartView.swift */; };
-		2F7AD6822821DCF900AA2048 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AD67E2821DCEB00AA2048 /* CycleView.swift */; };
+		2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */; };
+		2F3D676A2821AA2500DFD9A1 /* CycleStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D67692821AA2500DFD9A1 /* CycleStartView.swift */; };
 		2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089A2732EC62008F8250 /* CircularPathApp.swift */; };
+		2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089C2732EC62008F8250 /* CycleView.swift */; };
 		2FDB089F2732EC64008F8250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDB089E2732EC64008F8250 /* Assets.xcassets */; };
 		2FDB08A22732EC64008F8250 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDB08A12732EC64008F8250 /* Preview Assets.xcassets */; };
+		2FDB08AF2732F0D1008F8250 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB08AE2732F0D1008F8250 /* RoundButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F7AD67B2821DCEB00AA2048 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
-		2F7AD67C2821DCEB00AA2048 /* CycleView+Observed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CycleView+Observed.swift"; sourceTree = "<group>"; };
-		2F7AD67D2821DCEB00AA2048 /* CycleStartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleStartView.swift; sourceTree = "<group>"; };
-		2F7AD67E2821DCEB00AA2048 /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
-		2FDB08972732EC62008F8250 /* CircularPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleView+Observed.swift"; sourceTree = "<group>"; };
+		2F3D67692821AA2500DFD9A1 /* CycleStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleStartView.swift; sourceTree = "<group>"; };
+		2FDB08972732EC62008F8250 /* CycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDB089A2732EC62008F8250 /* CircularPathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularPathApp.swift; sourceTree = "<group>"; };
+		2FDB089C2732EC62008F8250 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
 		2FDB089E2732EC64008F8250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FDB08A12732EC64008F8250 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FDB08AE2732F0D1008F8250 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +38,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F7AD67A2821DCEB00AA2048 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				2F7AD67B2821DCEB00AA2048 /* RoundButton.swift */,
-				2F7AD67C2821DCEB00AA2048 /* CycleView+Observed.swift */,
-				2F7AD67D2821DCEB00AA2048 /* CycleStartView.swift */,
-				2F7AD67E2821DCEB00AA2048 /* CycleView.swift */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		2FDB088E2732EC62008F8250 = {
 			isa = PBXGroup;
 			children = (
@@ -60,7 +49,8 @@
 		2FDB08982732EC62008F8250 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FDB08972732EC62008F8250 /* CircularPath.app */,
+				2FDB08972732EC62008F8250 /* CycleTracker.app */,
+
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,7 +58,7 @@
 		2FDB08992732EC62008F8250 /* CircularPath */ = {
 			isa = PBXGroup;
 			children = (
-				2F7AD67A2821DCEB00AA2048 /* Scenes */,
+				2FDB08AC2732F09C008F8250 /* Scenes */,
 				2FDB089A2732EC62008F8250 /* CircularPathApp.swift */,
 				2FDB089E2732EC64008F8250 /* Assets.xcassets */,
 				2FDB08A02732EC64008F8250 /* Preview Content */,
@@ -84,12 +74,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2FDB08AC2732F09C008F8250 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2FDB089C2732EC62008F8250 /* CycleView.swift */,
+				2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */,
+				2FDB08AE2732F0D1008F8250 /* RoundButton.swift */,
+				2F3D67692821AA2500DFD9A1 /* CycleStartView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2FDB08962732EC62008F8250 /* CircularPath */ = {
+		2FDB08962732EC62008F8250 /* CycleTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FDB08A52732EC64008F8250 /* Build configuration list for PBXNativeTarget "CircularPath" */;
+			buildConfigurationList = 2FDB08A52732EC64008F8250 /* Build configuration list for PBXNativeTarget "CycleTracker" */;
 			buildPhases = (
 				2FDB08932732EC62008F8250 /* Sources */,
 				2FDB08942732EC62008F8250 /* Frameworks */,
@@ -99,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = CircularPath;
+			name = CycleTracker;
 			productName = CircularPath;
-			productReference = 2FDB08972732EC62008F8250 /* CircularPath.app */;
+			productReference = 2FDB08972732EC62008F8250 /* CycleTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,20 +120,21 @@
 					};
 				};
 			};
-			buildConfigurationList = 2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CircularPath" */;
+			buildConfigurationList = 2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CycleTracker" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 2FDB088E2732EC62008F8250;
 			productRefGroup = 2FDB08982732EC62008F8250 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2FDB08962732EC62008F8250 /* CircularPath */,
+				2FDB08962732EC62008F8250 /* CycleTracker */,
 			);
 		};
 /* End PBXProject section */
@@ -154,11 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7AD6812821DCF900AA2048 /* CycleStartView.swift in Sources */,
-				2F7AD67F2821DCF900AA2048 /* RoundButton.swift in Sources */,
-				2F7AD6822821DCF900AA2048 /* CycleView.swift in Sources */,
+				2F3D676A2821AA2500DFD9A1 /* CycleStartView.swift in Sources */,
+				2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */,
+				2FDB08AF2732F0D1008F8250 /* RoundButton.swift in Sources */,
+				2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */,
 				2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */,
-				2F7AD6802821DCF900AA2048 /* CycleView+Observed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +304,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.anapp4that.CircularPath;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anapp4that.CycleTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -331,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.anapp4that.CircularPath;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anapp4that.CycleTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -342,7 +344,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CircularPath" */ = {
+		2FDB08922732EC62008F8250 /* Build configuration list for PBXProject "CycleTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FDB08A32732EC64008F8250 /* Debug */,
@@ -351,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FDB08A52732EC64008F8250 /* Build configuration list for PBXNativeTarget "CircularPath" */ = {
+		2FDB08A52732EC64008F8250 /* Build configuration list for PBXNativeTarget "CycleTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2FDB08A62732EC64008F8250 /* Debug */,

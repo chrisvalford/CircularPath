@@ -21,6 +21,8 @@ extension CycleView {
         @Published var title: String
         @Published var timerString: String
         @Published var unit: String
+        @Published var startDate: Date?
+        @Published var elapsedDays = 0
         
         public var points: [CGPoint] = []
 
