@@ -12,6 +12,7 @@ struct CycleView: View {
     @State private var selectedDate = Date.now
     @State private var buttonText = "Select your start date"
     @State private var progressValue: CGFloat = 0.0
+    @State private var pointsCreated = false
     
     // Navigation
     @State private var showPopUp = false
@@ -37,10 +38,14 @@ struct CycleView: View {
                     }
                     ProgressBarView(progress: self.$progressValue)
                         .frame(width: (geometry.size.width * 0.8), height: (geometry.size.width * 0.8))
-                    ForEach(observed.views) { view in
-                        RoundButton(radius: 20, backgroundColor: view.spotColor, function: { somethingTapped() })
-                            .position(view.point)
-                    }
+                    // FIXME: Only draw on load
+//                    if $pointsCreated.wrappedValue == false {
+                        ForEach(observed.views) { view in
+                            RoundButton(radius: 20, backgroundColor: view.spotColor, function: { somethingTapped() })
+                                .position(view.point)
+                        }
+//                        pointsCreated = true
+//                    }
                     Circle()
                         .fill(Color.white)
                         .frame(width: (geometry.size.width * 0.7), height: (geometry.size.width * 0.7))

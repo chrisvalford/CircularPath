@@ -9,7 +9,15 @@ import SwiftUI
 
 struct UserPreferencesView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [Color("gradientLight"), Color("gradientDark"), Color("gradientLight")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                Text("TODO:")
+            }
+            .navigationTitle("Your preferences")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

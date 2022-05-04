@@ -21,7 +21,9 @@ extension CycleView {
         @Published var title: String
         @Published var timerString: String
         @Published var unit: String
-        @Published var startDate: Date?
+        @Published var startDate: Date? {
+            didSet { addCycle() }
+        }
         @Published var elapsedDays = 0
         
         public var points: [CGPoint] = []
@@ -32,10 +34,18 @@ extension CycleView {
             unit = "Days"
         }
         
-        /*
-         GeometryProxy(owner: #6808, _size: #2645, _environment: #6432, _transform: #3384, _position: #2629, _safeAreaInsets: #3440, _seed: 1)
-         GeometryProxy(owner: #6808, _size: #2645, _environment: #6432, _transform: #3384, _position: #2629, _safeAreaInsets: #3440, _seed: 1)
-         */
+        private func addCycle() {
+            // TODO: Check a cycle for this month doesn't already exist
+            let context = PersistenceController.shared.container.viewContext
+            let cycle = Cycle(context: context)
+            cycle.id = UUID()
+            cycle.startDate = startDate
+            do {
+                try context.save()
+            } catch {
+                print(error)
+            }
+        }
         
         func createPoints(for metrics: GeometryProxy) {
             drawCirclePoints(quantity: 28,

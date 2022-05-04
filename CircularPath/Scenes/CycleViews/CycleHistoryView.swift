@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CycleHistoryView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Cycle.startDate, ascending: false)],
         animation: .default)
@@ -17,11 +17,15 @@ struct CycleHistoryView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(cycles) { cycle in
-                    Text("Item at \(cycle.startDate!, formatter: itemFormatter)")
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [Color("gradientLight"), Color("gradientDark"), Color("gradientLight")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea()
+                List {
+                    ForEach(cycles) { cycle in
+                        CycleHistoryCellView(cycle: cycle)
+                    }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
             }
             .navigationTitle("Cycle History")
             .navigationBarTitleDisplayMode(.inline)
@@ -31,7 +35,7 @@ struct CycleHistoryView: View {
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { cycles[$0] }.forEach(viewContext.delete)
-
+            
             do {
                 try viewContext.save()
             } catch {
@@ -43,13 +47,6 @@ struct CycleHistoryView: View {
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .medium
-    formatter.timeStyle = .none
-    return formatter
-}()
 
 struct CycleHistoryView_Previews: PreviewProvider {
     static var previews: some View {
