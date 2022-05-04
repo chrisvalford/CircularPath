@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CycleView: View {
     @StateObject private var observed = Observed()
-    @State private var showPopUp = false
     @State private var selectedDate = Date.now
     @State private var buttonText = "Select your start date"
     @State private var progressValue: CGFloat = 0.0
+    
+    // Navigation
+    @State private var showPopUp = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -56,25 +58,8 @@ struct CycleView: View {
                     .padding(40)
                     
                 }
-                .navigationTitle("Cycle")
+                .navigationTitle("Current Cycle")
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Button(action: {
-                            print("List")
-                        }) {
-                            Label("List", systemImage: "list.bullet.circle")
-                        }
-                    }
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            print("Settings")
-                        }) {
-                            Label("Settings", systemImage: "person.circle")
-                        }
-                    }
-                }
-                .tint(Color("spotPink"))
             }
             .onAppear(perform: {
                 observed.createPoints(for: geometry)

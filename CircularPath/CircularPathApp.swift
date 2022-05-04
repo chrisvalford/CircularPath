@@ -13,7 +13,7 @@ struct CircularPathApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CycleView()
+            TabBarView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
