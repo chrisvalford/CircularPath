@@ -15,6 +15,11 @@ struct CycleHistoryView: View {
         animation: .default)
     private var cycles: FetchedResults<Cycle>
     
+    init() {
+        UITableView.appearance().backgroundColor = .clear
+        UITableViewCell.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {

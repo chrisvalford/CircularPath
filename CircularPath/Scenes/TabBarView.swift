@@ -28,7 +28,7 @@ struct TabBarView: View {
                     Label("Preferences", systemImage: "person.circle")
                 }.tag(2)
         }
-        .accentColor(Color("spotPink"))
+        .accentColor(Color("spotGreen"))
     }
 }
 
