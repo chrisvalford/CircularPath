@@ -16,6 +16,7 @@ struct CycleView: View {
     
     var body: some View {
         GeometryReader { geometry in
+            NavigationView {
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color("gradientLight"), Color("gradientDark"), Color("gradientLight")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                         .ignoresSafeArea()
@@ -53,38 +54,59 @@ struct CycleView: View {
                             .foregroundColor(.black)
                     }
                     .padding(40)
+                    
                 }
-                .onAppear(perform: {
-                    observed.createPoints(for: geometry)
-                })
-                .onChange(of: selectedDate, perform: { value in
-                    buttonText = "Started:  \(selectedDate.formatted(date: .abbreviated, time: .omitted))"
-                    observed.startDate = selectedDate
-                })
-                if $showPopUp.wrappedValue {
-                    ZStack {
-                        Color.white
-                        VStack(spacing: 16) {
-                            DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: [.date]) {
-                                Text("Start date")
-                            }
-                            //                        .padding()
-                            Button(action: {
-                                showPopUp = false
-                            }, label: {
-                                Text("Done")
-                            })
-                            .frame(minWidth: 100, maxWidth: .infinity, minHeight: 44)
-                            .padding(.horizontal)
-                            .background(Color("spotPink"))
-                            .foregroundColor(.black)
-                            .cornerRadius(8)
+                .navigationTitle("Cycle")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                        Button(action: {
+                            print("List")
+                        }) {
+                            Label("List", systemImage: "list.bullet.circle")
                         }
-                        .padding()
                     }
-                    .frame(width: geometry.size.width, height: 140)
-                    .cornerRadius(20).shadow(radius: 20)
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            print("Settings")
+                        }) {
+                            Label("Settings", systemImage: "person.circle")
+                        }
+                    }
                 }
+                .tint(Color("spotPink"))
+            }
+            .onAppear(perform: {
+                observed.createPoints(for: geometry)
+            })
+            .onChange(of: selectedDate, perform: { value in
+                buttonText = "Started:  \(selectedDate.formatted(date: .abbreviated, time: .omitted))"
+                observed.startDate = selectedDate
+            })
+            if $showPopUp.wrappedValue {
+                ZStack {
+                    Color.white
+                    VStack(spacing: 16) {
+                        DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: [.date]) {
+                            Text("Start date")
+                        }
+                        //                        .padding()
+                        Button(action: {
+                            showPopUp = false
+                        }, label: {
+                            Text("Done")
+                        })
+                        .frame(minWidth: 100, maxWidth: .infinity, minHeight: 44)
+                        .padding(.horizontal)
+                        .background(Color("spotPink"))
+                        .foregroundColor(.black)
+                        .cornerRadius(8)
+                    }
+                    .padding()
+                }
+                .frame(width: geometry.size.width, height: 140)
+                .cornerRadius(20).shadow(radius: 20)
+            }
         }
     }
     

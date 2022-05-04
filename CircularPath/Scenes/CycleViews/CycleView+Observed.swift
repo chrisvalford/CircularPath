@@ -32,11 +32,17 @@ extension CycleView {
             unit = "Days"
         }
         
+        /*
+         GeometryProxy(owner: #6808, _size: #2645, _environment: #6432, _transform: #3384, _position: #2629, _safeAreaInsets: #3440, _seed: 1)
+         GeometryProxy(owner: #6808, _size: #2645, _environment: #6432, _transform: #3384, _position: #2629, _safeAreaInsets: #3440, _seed: 1)
+         */
+        
         func createPoints(for metrics: GeometryProxy) {
             drawCirclePoints(quantity: 28,
                              radius: (metrics.size.width * 0.8 / 2),
                              center: CGPoint(x: metrics.size.width / 2,
-                                             y: metrics.size.height / 2))
+                                             y: metrics.size.height / 2 - 22))
+            // TODO: The Y: -22 above needs to be replaced with the offset caused by the navigation bar
             var index = 0
             for point in points {
                 var view = RoundView(id: index, point: point)
