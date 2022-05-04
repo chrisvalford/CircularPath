@@ -50,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				2FDB08972732EC62008F8250 /* CycleTracker.app */,
+
 			);
 			name = Products;
 			sourceTree = "<group>";
