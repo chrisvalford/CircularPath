@@ -74,8 +74,12 @@ extension CycleView {
             }
         }
         
+        // Adds a Cycle record to the CD store if there isn't a current cycle
+        // TODO: Present a view offering to update the current cycles start date
         private func addCycle() {
-            // TODO: Check a cycle for this month doesn't already exist
+            if hasCurrentCycle() {
+                return
+            }
             let context = PersistenceController.shared.container.viewContext
             let cycle = Cycle(context: context)
             cycle.id = UUID()
