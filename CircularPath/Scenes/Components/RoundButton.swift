@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RoundButton: View {
-
     var radius: CGFloat = 20
     var backgroundColor: Color = .red
     var function: () -> Void

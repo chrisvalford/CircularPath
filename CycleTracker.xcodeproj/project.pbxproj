@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */; };
 		2F64271B2822846200E42784 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64271A2822846200E42784 /* ProgressBarView.swift */; };
+		2F6CEDA928228E600037523A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDA828228E600037523A /* UserModel.swift */; };
+		2F6CEDAB28228E700037523A /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDAA28228E700037523A /* CycleModel.swift */; };
+		2F6CEDAE28228E960037523A /* CycleTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDAC28228E960037523A /* CycleTracker.xcdatamodeld */; };
+		2F6CEDB028228F770037523A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDAF28228F770037523A /* Persistence.swift */; };
+		2F6CEDB52822A16C0037523A /* UserOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDB42822A16C0037523A /* UserOnboardingView.swift */; };
+		2F6CEDB72822A1810037523A /* UserPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDB62822A1810037523A /* UserPreferencesView.swift */; };
+		2F6CEDB92822A19B0037523A /* CycleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDB82822A19B0037523A /* CycleHistoryView.swift */; };
+		2F6CEDBC2822B16A0037523A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDBB2822B16A0037523A /* TabBarView.swift */; };
+		2F6CEDBE2822B6790037523A /* CycleHistoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CEDBD2822B6790037523A /* CycleHistoryCellView.swift */; };
 		2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089A2732EC62008F8250 /* CircularPathApp.swift */; };
 		2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB089C2732EC62008F8250 /* CycleView.swift */; };
 		2FDB089F2732EC64008F8250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDB089E2732EC64008F8250 /* Assets.xcassets */; };
@@ -19,6 +28,16 @@
 /* Begin PBXFileReference section */
 		2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CycleView+Observed.swift"; sourceTree = "<group>"; };
 		2F64271A2822846200E42784 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		2F6CEDA828228E600037523A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		2F6CEDAA28228E700037523A /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
+		2F6CEDAD28228E960037523A /* CycleTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CycleTracker.xcdatamodel; sourceTree = "<group>"; };
+		2F6CEDAF28228F770037523A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2F6CEDB42822A16C0037523A /* UserOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOnboardingView.swift; sourceTree = "<group>"; };
+		2F6CEDB62822A1810037523A /* UserPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferencesView.swift; sourceTree = "<group>"; };
+		2F6CEDB82822A19B0037523A /* CycleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleHistoryView.swift; sourceTree = "<group>"; };
+		2F6CEDBA2822A9E80037523A /* CycleTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CycleTracker-Info.plist"; sourceTree = "<group>"; };
+		2F6CEDBB2822B16A0037523A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2F6CEDBD2822B6790037523A /* CycleHistoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleHistoryCellView.swift; sourceTree = "<group>"; };
 		2FDB08972732EC62008F8250 /* CycleTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CycleTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FDB089A2732EC62008F8250 /* CircularPathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularPathApp.swift; sourceTree = "<group>"; };
 		2FDB089C2732EC62008F8250 /* CycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
@@ -38,9 +57,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F6CEDA728228E4E0037523A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CEDA828228E600037523A /* UserModel.swift */,
+				2F6CEDAA28228E700037523A /* CycleModel.swift */,
+				2F6CEDAC28228E960037523A /* CycleTracker.xcdatamodeld */,
+				2F6CEDAF28228F770037523A /* Persistence.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F6CEDB12822A11A0037523A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2FDB08AE2732F0D1008F8250 /* RoundButton.swift */,
+				2F64271A2822846200E42784 /* ProgressBarView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2F6CEDB22822A1290037523A /* CycleViews */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CEDB82822A19B0037523A /* CycleHistoryView.swift */,
+				2F6CEDBD2822B6790037523A /* CycleHistoryCellView.swift */,
+				2FDB089C2732EC62008F8250 /* CycleView.swift */,
+				2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */,
+			);
+			path = CycleViews;
+			sourceTree = "<group>";
+		};
+		2F6CEDB32822A1430037523A /* UserViews */ = {
+			isa = PBXGroup;
+			children = (
+				2F6CEDB42822A16C0037523A /* UserOnboardingView.swift */,
+				2F6CEDB62822A1810037523A /* UserPreferencesView.swift */,
+			);
+			path = UserViews;
+			sourceTree = "<group>";
+		};
 		2FDB088E2732EC62008F8250 = {
 			isa = PBXGroup;
 			children = (
+				2F6CEDBA2822A9E80037523A /* CycleTracker-Info.plist */,
 				2FDB08992732EC62008F8250 /* CircularPath */,
 				2FDB08982732EC62008F8250 /* Products */,
 			);
@@ -57,6 +117,7 @@
 		2FDB08992732EC62008F8250 /* CircularPath */ = {
 			isa = PBXGroup;
 			children = (
+				2F6CEDA728228E4E0037523A /* Models */,
 				2FDB08AC2732F09C008F8250 /* Scenes */,
 				2FDB089A2732EC62008F8250 /* CircularPathApp.swift */,
 				2FDB089E2732EC64008F8250 /* Assets.xcassets */,
@@ -76,10 +137,10 @@
 		2FDB08AC2732F09C008F8250 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				2F64271A2822846200E42784 /* ProgressBarView.swift */,
-				2FDB089C2732EC62008F8250 /* CycleView.swift */,
-				2F0882CD28218E1400A3E0F8 /* CycleView+Observed.swift */,
-				2FDB08AE2732F0D1008F8250 /* RoundButton.swift */,
+				2F6CEDB32822A1430037523A /* UserViews */,
+				2F6CEDB22822A1290037523A /* CycleViews */,
+				2F6CEDB12822A11A0037523A /* Components */,
+				2F6CEDBB2822B16A0037523A /* TabBarView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -155,11 +216,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6CEDB028228F770037523A /* Persistence.swift in Sources */,
 				2F64271B2822846200E42784 /* ProgressBarView.swift in Sources */,
+				2F6CEDBC2822B16A0037523A /* TabBarView.swift in Sources */,
+				2F6CEDB92822A19B0037523A /* CycleHistoryView.swift in Sources */,
 				2F0882CE28218E1400A3E0F8 /* CycleView+Observed.swift in Sources */,
 				2FDB08AF2732F0D1008F8250 /* RoundButton.swift in Sources */,
+				2F6CEDB72822A1810037523A /* UserPreferencesView.swift in Sources */,
+				2F6CEDB52822A16C0037523A /* UserOnboardingView.swift in Sources */,
 				2FDB089D2732EC62008F8250 /* CycleView.swift in Sources */,
+				2F6CEDA928228E600037523A /* UserModel.swift in Sources */,
+				2F6CEDBE2822B6790037523A /* CycleHistoryCellView.swift in Sources */,
+				2F6CEDAE28228E960037523A /* CycleTracker.xcdatamodeld in Sources */,
 				2FDB089B2732EC62008F8250 /* CircularPathApp.swift in Sources */,
+				2F6CEDAB28228E700037523A /* CycleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,9 +365,10 @@
 				DEVELOPMENT_TEAM = 3G54NEN3F6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "CycleTracker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,9 +395,10 @@
 				DEVELOPMENT_TEAM = 3G54NEN3F6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "CycleTracker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +410,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -364,6 +436,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F6CEDAC28228E960037523A /* CycleTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F6CEDAD28228E960037523A /* CycleTracker.xcdatamodel */,
+			);
+			currentVersion = 2F6CEDAD28228E960037523A /* CycleTracker.xcdatamodel */;
+			path = CycleTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2FDB088F2732EC62008F8250 /* Project object */;
 }
