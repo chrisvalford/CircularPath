@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CircularPathApp: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            CycleView()
+            TabBarView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

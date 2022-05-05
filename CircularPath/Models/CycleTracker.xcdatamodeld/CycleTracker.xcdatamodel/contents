@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F5063e" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cycle" representedClassName=".Cycle" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="toCycleDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CycleDetail" inverseName="toCycle" inverseEntity="CycleDetail"/>
+        <relationship name="toUserDetails" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserDetails" inverseName="toCycles" inverseEntity="UserDetails"/>
+    </entity>
+    <entity name="CycleDetail" representedClassName="CycleDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="basalBodyTemperature" optional="YES" attributeType="Float" minValueString="35" maxValueString="38" defaultValueString="36.5" usesScalarValueType="YES"/>
+        <attribute name="day" attributeType="Integer 16" minValueString="1" maxValueString="31" defaultValueString="1" usesScalarValueType="YES"/>
+        <attribute name="discomfort" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="4" defaultValueString="2" usesScalarValueType="YES"/>
+        <attribute name="flow" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="4" defaultValueString="2" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="mood" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="4" defaultValueString="2" usesScalarValueType="YES"/>
+        <relationship name="toCycle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cycle" inverseName="toCycleDetail" inverseEntity="Cycle"/>
+    </entity>
+    <entity name="Item" representedClassName=".Item" syncable="YES" codeGenerationType="class">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="UserDetails" representedClassName=".UserDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="dob" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="numberOfChildren" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="toCycles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cycle" inverseName="toUserDetails" inverseEntity="Cycle"/>
+    </entity>
+    <elements>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="UserDetails" positionX="-54" positionY="0" width="128" height="89"/>
+        <element name="Cycle" positionX="-36" positionY="36" width="128" height="14"/>
+        <element name="CycleDetail" positionX="-18" positionY="63" width="128" height="14"/>
+    </elements>
+</model>
