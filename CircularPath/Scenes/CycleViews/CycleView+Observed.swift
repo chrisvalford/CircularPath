@@ -6,6 +6,7 @@
 //
 
 import Combine
+import CoreData
 import SwiftUI
 
 extension CycleView {
@@ -27,11 +28,50 @@ extension CycleView {
         @Published var elapsedDays = 0
         
         public var points: [CGPoint] = []
+        private var currentCycle: Cycle?
+        
+//        @Environment(\.managedObjectContext) private var viewContext
+//        @FetchRequest(
+//            entity: Cycle.entity(),
+//            sortDescriptors: [
+//                NSSortDescriptor(keyPath: \Cycle.startDate, ascending: false)
+//            ]
+//        ) var users: FetchedResults<Cycle>
 
         init() {
             title = "Ovulation in"
             timerString = "03"
             unit = "Days"
+        }
+        
+        // Check the CD store for a cycle which started in the last 28 days
+        // Update the elapsedDays value if true
+        func hasCurrentCycle() -> Bool {
+            guard let current = currentCycle else {
+                return false
+            }
+            if current.isCurrent() {
+                elapsedDays = current.elapsedDays()
+                return true
+            }
+            return false
+        }
+        
+        func fetchCurrentCycle() {
+            let context = PersistenceController.shared.container.viewContext
+            let fetchRequest: NSFetchRequest<Cycle>
+            fetchRequest = Cycle.fetchRequest()
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: false)]
+            do {
+                let objects: [Cycle] = try context.fetch(fetchRequest)
+                guard let current = objects.first else {
+                    return
+                }
+                currentCycle = current
+                startDate = current.startDate
+            } catch {
+                print(error)
+            }
         }
         
         private func addCycle() {
@@ -42,9 +82,15 @@ extension CycleView {
             cycle.startDate = startDate
             do {
                 try context.save()
+                currentCycle = cycle
             } catch {
                 print(error)
             }
+        }
+        
+        public func addDayObservation(for day: Int) {
+            guard let cycle = currentCycle else { return }
+            cycle.addDayObservation(for: day)
         }
         
         func createPoints(for metrics: GeometryProxy) {

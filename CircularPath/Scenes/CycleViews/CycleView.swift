@@ -26,7 +26,6 @@ struct CycleView: View {
                     VStack {
                         Button(action: {
                             showPopUp = true
-                            incrementProgress()
                         }, label: {
                             Text(buttonText)
                         })
@@ -41,7 +40,7 @@ struct CycleView: View {
                     // FIXME: Only draw on load
 //                    if $pointsCreated.wrappedValue == false {
                         ForEach(observed.views) { view in
-                            RoundButton(radius: 20, backgroundColor: view.spotColor, function: { somethingTapped() })
+                            RoundButton(radius: 20, backgroundColor: view.spotColor, function: { somethingTapped(id: view.id) })
                                 .position(view.point)
                         }
 //                        pointsCreated = true
@@ -68,6 +67,12 @@ struct CycleView: View {
             }
             .onAppear(perform: {
                 observed.createPoints(for: geometry)
+                observed.fetchCurrentCycle()
+                if observed.hasCurrentCycle() {
+                    // Yes you can force unwrap as startDate is not optional
+                    selectedDate = observed.startDate!
+                    progressValue = CGFloat(observed.elapsedDays) * 0.0358
+                }
             })
             .onChange(of: selectedDate, perform: { value in
                 buttonText = "Started:  \(selectedDate.formatted(date: .abbreviated, time: .omitted))"
@@ -100,16 +105,9 @@ struct CycleView: View {
         }
     }
     
-    func incrementProgress() {
-        self.progressValue = CGFloat(observed.elapsedDays) * 0.0358
-        observed.elapsedDays += 1
-        if observed.elapsedDays > 28 {
-            observed.elapsedDays = 0
-        }
-    }
-    
-    private func somethingTapped() {
-        print("Ouch!")
+    private func somethingTapped(id: Int) {
+        print("You tapped day \(id)")
+        observed.addDayObservation(for: id)
     }
 }
 

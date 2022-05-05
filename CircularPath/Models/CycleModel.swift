@@ -17,4 +17,13 @@ extension Cycle {
         }
         return days < 28
     }
+    
+    func elapsedDays() -> Int {
+        let now = Date.now
+        return Calendar.current.dateComponents([.day], from: self.startDate!, to: now).day ?? 0
+    }
+    
+    func addDayObservation(for day: Int, temperature: Float? = nil, mood: Int? = nil, discomfort: Int? = nil, flow: Int? = nil) {
+        print("Adding a day observation for day: \(day) (started: \(startDate?.description ?? "unknown")")
+    }
 }
