@@ -80,15 +80,9 @@ extension CycleView {
             if hasCurrentCycle() {
                 return
             }
-            let context = PersistenceController.shared.container.viewContext
-            let cycle = Cycle(context: context)
-            cycle.id = UUID()
-            cycle.startDate = startDate
-            do {
-                try context.save()
+            guard let startDate = startDate else { return }
+            if let cycle = Cycle(startDate: startDate) {
                 currentCycle = cycle
-            } catch {
-                print(error)
             }
         }
         
@@ -96,33 +90,38 @@ extension CycleView {
             guard let cycle = currentCycle else { return }
             cycle.addDayObservation(for: day)
         }
-        
+
+        // TODO: Remove drawCirclePoints as we can use the next line with the lazy var circlePoints
+        //private var metrics: GeometryProxy?
         func createPoints(for metrics: GeometryProxy) {
-            drawCirclePoints(quantity: 28,
-                             radius: (metrics.size.width * 0.8 / 2),
-                             center: CGPoint(x: metrics.size.width / 2,
-                                             y: metrics.size.height / 2 - 22))
-            // TODO: The Y: -22 above needs to be replaced with the offset caused by the navigation bar
-            var index = 0
-            for point in points {
-                var view = RoundView(id: index, point: point)
-                var color: Color
-                if 0...3 ~= index {
-                    color = Color("spotRed")
-                } else if 4...7 ~= index {
-                    color = Color("spotPink")
-                } else if 8...16 ~= index {
-                    color = Color("spotGreen")
-                } else if 17...21 ~= index {
-                    color = Color("spotPink")
-                } else if 22...26 ~= index {
-                    color = Color("spotYellow")
-                } else {
-                    color = Color("spotRed")
+            //self.metrics = metrics
+            if self.points.isEmpty {
+                drawCirclePoints(quantity: 28,
+                                 radius: (metrics.size.width * 0.8 / 2),
+                                 center: CGPoint(x: metrics.size.width / 2,
+                                                 y: metrics.size.height / 2 - 22))
+                // TODO: The Y: -22 above needs to be replaced with the offset caused by the navigation bar
+                var index = 0
+                for point in points {
+                    var view = RoundView(id: index, point: point)
+                    var color: Color
+                    if 0...3 ~= index {
+                        color = Color("spotRed")
+                    } else if 4...7 ~= index {
+                        color = Color("spotPink")
+                    } else if 8...16 ~= index {
+                        color = Color("spotGreen")
+                    } else if 17...21 ~= index {
+                        color = Color("spotPink")
+                    } else if 22...26 ~= index {
+                        color = Color("spotYellow")
+                    } else {
+                        color = Color("spotRed")
+                    }
+                    view.spotColor = color
+                    views.append(view)
+                    index += 1
                 }
-                view.spotColor = color
-                views.append(view)
-                index += 1
             }
         }
         
