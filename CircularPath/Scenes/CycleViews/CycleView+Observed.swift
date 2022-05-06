@@ -127,14 +127,26 @@ extension CycleView {
         }
         
         public func drawCirclePoints(quantity: Int, radius: CGFloat, center: CGPoint) {
-            let slice = 2 * CGFloat.pi / CGFloat(quantity)
-            for index in 0..<quantity {
+            pointQuantity = quantity
+            circleRadius = radius
+            circleCenter = center
+            self.points = circlePoints
+        }
+
+        private var pointQuantity = 0
+        private var circleRadius = CGFloat(0.0)
+        private var circleCenter = CGPoint(x: 0.0, y: 0.0)
+        private lazy var circlePoints: [CGPoint] = {
+            var points: [CGPoint] = []
+            let slice = 2 * CGFloat.pi / CGFloat(pointQuantity)
+            for index in 0..<pointQuantity {
                 let angle = (slice * CGFloat(index)) - 1.570796 // - 90 degrees
-                let xPosition = (center.x + radius * cos(angle))
-                let yPosition = (center.y + radius * sin(angle))
+                let xPosition = (circleCenter.x + circleRadius * cos(angle))
+                let yPosition = (circleCenter.y + circleRadius * sin(angle))
                 let point = CGPoint(x: xPosition.rounded(.toNearestOrEven), y: yPosition.rounded(.toNearestOrEven))
                 points.append(point)
             }
-        }
+            return points
+        }()
     }
 }
